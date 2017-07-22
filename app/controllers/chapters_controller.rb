@@ -1,4 +1,5 @@
 class ChaptersController < ApplicationController
+  
   def index
     @book = Book.find(params[:book_id])
     @chapters = Chapter.all
@@ -7,6 +8,10 @@ class ChaptersController < ApplicationController
   def show
     @book = Book.find(params[:book_id])
     @chapter = Chapter.find(params[:id])
+  end
+
+  def new
+    Chapter.new
   end
 
   def create
@@ -20,7 +25,7 @@ private
     params.require(:chapter).permit(
       :number,
       :title,
-      :text,
+      :text
     )
   end
 

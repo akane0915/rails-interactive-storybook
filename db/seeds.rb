@@ -20,11 +20,9 @@ class Seed
         text: "test text2"
       },
     ])
-  end
-
     puts "Generated #{Book.count} books"
     puts "Generated #{Chapter.count} chapters"
-
+  end
 end
 
 Seed.begin

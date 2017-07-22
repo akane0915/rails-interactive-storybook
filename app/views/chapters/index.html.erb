@@ -1,11 +1,5 @@
-<h1>Goldilocks and the Three Bears</h1>
+<h1><%= @book.title %></h1>
 
 <% @chapters.each do |chapter| %>
-
   <h2><%= chapter.title %></h2>
-  <p><%= chapter.text %></p>
-
-
 <% end %>
-<br>
-<%= link_to 'Next Chapter', chapter_path %>
