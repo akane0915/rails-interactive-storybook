@@ -1,0 +1,5 @@
+<%= form_for object do |f| %>
+  <%= f.select :family_type, options_for_select([['', nil],['bear', 'bear'], ['puffin', 'puffin'],['banana slug','banana slug'],['donkey', 'donkey']]) %>
+
+  <%= f.submit %>
+<% end %>
