@@ -1,10 +1,30 @@
-chapters = Chapter.create!([
-  { number: 1,
-    title: "Chapter 1",
-    text: "Once upon a time, deep in a forest lived a @family_type family."
-  },
-  { number: 2,
-    title: "Chapter 2",
-    text: "There was a great big Papa @family_type, a medium sized Mama @family_type, and a wee little Baby @family_type. "
-  },
-])
+class Seed
+
+  def self.begin
+    seed = Seed.new
+    seed.generate_books
+  end
+
+  def generate_books
+    book = Book.create!(
+      title: "Goldilocks and The Three Bears (Or Something Like That...)"
+    )
+
+    book.chapters.create!([
+      { number: 1,
+        title: "Chapter 1",
+        text: "test text1"
+      },
+      { number: 2,
+        title: "Chapter 2",
+        text: "test text2"
+      },
+    ])
+  end
+
+    puts "Generated #{Book.count} books"
+    puts "Generated #{Chapter.count} chapters"
+
+end
+
+Seed.begin
