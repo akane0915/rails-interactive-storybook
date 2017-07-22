@@ -1,0 +1,5 @@
+<%= form_for object do |f| %>
+  <%= f.select :landscape_type, options_for_select([['forest', 'forest'], ['tundra', 'tundra'],['grassland','grassland'],['desert', 'desert'], ['ocean', 'ocean']]) %>
+
+  <%= f.submit%>
+<% end %>

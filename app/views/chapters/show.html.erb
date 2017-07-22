@@ -2,5 +2,8 @@
 
 <p><%= @chapter.text %></p>
 
+<% if @chapter.number == 1 %>
+  <%= render "shared/landscape_type_form" , object: @book%>
+<% end %>
 
 <h3><%= link_to "Next Chapter", book_chapter_path(@book, @chapter.number + 1) %></h3>
