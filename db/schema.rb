@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170719043704) do
+ActiveRecord::Schema.define(version: 20170722161420) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "books", force: :cascade do |t|
+    t.string "landscape_type"
+    t.string "family_type"
+    t.string "food"
+    t.string "girl_name"
+    t.string "house_type"
+    t.string "food_description_one"
+    t.string "food_description_two"
+    t.string "seat_type"
+    t.string "bed_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "chapters", force: :cascade do |t|
     t.integer "number"
@@ -21,6 +35,7 @@ ActiveRecord::Schema.define(version: 20170719043704) do
     t.string "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "book_id"
   end
 
 end
