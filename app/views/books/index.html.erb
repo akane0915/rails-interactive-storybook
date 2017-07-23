@@ -1,5 +1,3 @@
 <h1>Interactive Story Book</h1>
 
-<% @books.each do |book| %>
-  <h3><%= link_to "#{book.title}", book_chapter_path(book, 1) %></h3>
-<% end %>
+<%= react_component 'Books', books: @books %>
