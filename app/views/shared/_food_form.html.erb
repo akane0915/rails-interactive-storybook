@@ -1,0 +1,5 @@
+<%= form_for object do |f| %>
+  <%= f.select :food, options_for_select([['', nil],['porridge', 'porridge'], ['fried rice', 'fried rice'],['pho','pho'],['kebabs', 'kebabs'],['gazpacho','gazpacho']]) %>
+
+  <%= f.submit %>
+<% end %>
