@@ -4,7 +4,7 @@ var Books = React.createClass({
       <div>
         {this.props.books.map(function(book){
           return (
-            <div>
+            <div key={book.id}>
               <Book book = {book}/>
             </div>
           )

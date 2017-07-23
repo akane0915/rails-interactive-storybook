@@ -1,11 +1,11 @@
-<h1><%= @chapter.title %></h1>
+<h1>new stuff</h1>
+<%= react_component 'Chapter', chapter: @chapter %>
 
-<p><%= @chapter.text %></p>
-
+<h1>old stuff</h1>
 <% if @chapter.number == 1 %>
   <p>
     Once upon a time, deep in a
-    <%= render "shared/landscape_type_form" , object: @book %>
+    <%= react_component('LandscapeTypeForm') %>
     lived a
     <%= render "shared/family_type_form" , object: @book%>
     family.  There was a great big Papa <%= @book.family_type %>, a medium sized Mama <%= @book.family_type %>, and a wee little Baby <%= @book.family_type %>.
