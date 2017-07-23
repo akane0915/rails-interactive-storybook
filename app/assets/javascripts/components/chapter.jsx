@@ -3,8 +3,7 @@ var Chapter = React.createClass({
     if (this.props.chapter.number == 1) {
       return (
         <div>
-          <h3>{this.props.chapter.title}</h3>
-          <p>Chapter 1 conditional works</p>
+          <Chapter1 chapter = {this.props.chapter} book = {this.props.book}/>
         </div>
       )
     } else if (this.props.chapter.number == 2) {

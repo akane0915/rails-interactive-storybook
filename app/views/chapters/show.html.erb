@@ -1,15 +1,8 @@
 <h1>new stuff</h1>
-<%= react_component 'Chapter', chapter: @chapter %>
+<%= react_component 'Chapter', chapter: @chapter, book: @book %>
 
-<h1>old stuff</h1>
 <% if @chapter.number == 1 %>
-  <p>
-    Once upon a time, deep in a
-    <%= react_component('LandscapeTypeForm') %>
-    lived a
-    <%= render "shared/family_type_form" , object: @book%>
-    family.  There was a great big Papa <%= @book.family_type %>, a medium sized Mama <%= @book.family_type %>, and a wee little Baby <%= @book.family_type %>.
-  </p>
+
 
 <% elsif @chapter.number == 2 %>
   <p>
