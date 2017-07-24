@@ -16,3 +16,16 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("default.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Rochester', cursive;
+
+  p{
+    font-size: 3em;
+  }
+}
