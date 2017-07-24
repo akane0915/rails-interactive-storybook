@@ -10,7 +10,7 @@ var Chapter1 = React.createClass({
     e.preventDefault();
 
     console.log("Landscape type updated to: " + this.state.landscape_type);
-    this.props.parentBookSubmit({book: {name: this.state.landscape_type}});
+    this.props.parentUpdateBook({book: {landscape_type: this.state.landscape_type}});
   },
 
   handleLandscapeChange: function(e){
