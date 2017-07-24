@@ -3,6 +3,7 @@ var Chapter2 = React.createClass({
   getInitialState: function(){
     return {
       food: this.props.book.food,
+      family_type: this.props.book.family_type,
     }
   },
 
@@ -51,7 +52,7 @@ var Chapter2 = React.createClass({
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
 
-          <Chapter2Text food = {this.state.food} family_type = {this.props.book.family_type} />
+          <Chapter2Text food = {this.state.food} family_type = {this.state.family_type} />
 
         </div>
 
