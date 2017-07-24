@@ -3,16 +3,20 @@ var Chapter1 = React.createClass({
   getInitialState: function(){
     return {
       landscape_type: this.props.book.landscape_type,
+      family_type: this.props.book.family_type,
     }
   },
 
-  updateLandscapeSubmit: function(e){
+  updateChapterOneFieldsSubmit: function(e){
     e.preventDefault();
     $.ajax({
       url: "/books/1",
       dataType: 'json',
       type: 'PATCH',
-      data: {book: {landscape_type: this.state.landscape_type}},
+      data: {book: {
+        landscape_type: this.state.landscape_type,
+        family_type: this.state.family_type}
+      },
       success: function(book) {
         this.props.parentUpdateBook(book);
       }.bind(this),
@@ -26,12 +30,16 @@ var Chapter1 = React.createClass({
     this.setState({landscape_type: e.target.value});
   },
 
+  handleFamilyChange: function(e){
+    this.setState({family_type: e.target.value});
+  },
+
   render: function() {
       return (
         <div>
           <h1>{this.props.chapter.title}</h1>
 
-          <form onSubmit={this.updateLandscapeSubmit}>
+          <form onSubmit={this.updateChapterOneFieldsSubmit}>
             <h3>Choose your landscape</h3>
 
             <select name="book[landscape_type]" value={this.state.landscape_type}
@@ -63,7 +71,7 @@ var Chapter1 = React.createClass({
           </form>
 
           <p>
-            Once upon a time, deep in a {this.state.landscape_type} lived a {this.props.book.family_type} family.  There was a great  big Papa {this.props.book.family_type}, a medium sized Mama {this.props.book.family_type}, and a wee little Baby {this.props.book.family_type}.
+            Once upon a time, deep in a <strong><em>{this.state.landscape_type}</em></strong> lived a <strong><em>{this.state.family_type}</em></strong> family.  There was a great  big Papa <strong><em>{this.state.family_type}</em></strong>, a medium sized Mama <strong><em>{this.state.family_type}</em></strong>, and a wee little Baby <strong><em>{this.state.family_type}</em></strong>.
           </p>
         </div>
       )
