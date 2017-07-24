@@ -24,8 +24,11 @@ var Chapter = React.createClass({
     } else if (this.props.chapter.number == 2) {
       return (
         <div>
-          <h3>{this.props.chapter.title}</h3>
-          <p>Not Chapter 1</p>
+        <Chapter2
+          chapter = {this.props.chapter}
+          book = {this.state.book}
+          parentUpdateBook={this.parentUpdateBook}
+        />
         </div>
       )
     }

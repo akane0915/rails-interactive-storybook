@@ -1,13 +1,9 @@
 <%= react_component 'Chapter', chapter: @chapter, book: @book %>
 
-<% if @chapter.number == 1 %>
 
-<% elsif @chapter.number == 2 %>
-  <p>
-    Now, one morning, Mama <%= @book.family_type %> made
-    <%= render "shared/food_form" , object: @book%>
-    for breakfast. The <%= @book.food %> was very hot. Papa <%= @book.family_type %> said, "Why don’t we take a walk in the forest while the <%= @book.food %> is cooling down." So, they went for a walk.
-  </p>
-<% end %>
 
 <h3><%= link_to "Next Chapter", book_chapter_path(@book, @chapter.number + 1) %></h3>
+
+<% unless @chapter.number == 1 %>
+  <h3><%= link_to "Go Back", book_chapter_path(@book, @chapter.number - 1) %></h3>
+<% end %>
