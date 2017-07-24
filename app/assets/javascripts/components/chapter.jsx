@@ -8,6 +8,7 @@ var Chapter = React.createClass({
 
   parentUpdateBook: function(formData){
     this.setState({book: formData});
+
   },
 
   render: function() {
