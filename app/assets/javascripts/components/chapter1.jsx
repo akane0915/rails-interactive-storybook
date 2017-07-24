@@ -29,10 +29,11 @@ var Chapter1 = React.createClass({
   render: function() {
       return (
         <div>
-          <h3>landscape_type:{this.props.book.landscape_type}</h3>
-          <h3>{this.props.chapter.title}</h3>
+          <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateLandscapeSubmit}>
+            <h3>Choose your landscape</h3>
+
             <select name="book[landscape_type]" value={this.state.landscape_type}
             onChange={this.handleLandscapeChange}>
 
@@ -43,6 +44,20 @@ var Chapter1 = React.createClass({
               <option value="desert">Desert</option>
               <option value="ocean">Ocean</option>
             </select>
+
+            <h3>Then pick an animal</h3>
+
+            <select name="book[family_type]" value={this.state.family_type}
+            onChange={this.handleFamilyChange}>
+
+              <option value=""></option>
+              <option value="bear">Bear</option>
+              <option value="puffin">Puffin</option>
+              <option value="banana slug">Banana Slug</option>
+              <option value="donkey">Donkey</option>
+            </select>
+
+            <h3>Now Click Save!</h3>
 
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>

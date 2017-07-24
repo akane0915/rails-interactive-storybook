@@ -4,10 +4,6 @@ var LandscapeTypeForm = React.createClass({
     return (
       <div>
         <form>
-
-
-
-
           <select name="landscape_type">
             <option value=""></option>
             <option value="forest">Forest</option>
