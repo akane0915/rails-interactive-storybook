@@ -18,8 +18,14 @@ class BooksController < ApplicationController
   def update
     book = Book.find(params[:id])
     chapter = Chapter.find(params[:id])
-    book.update(book_params)
-    redirect_to book_chapter_path(chapter)
+    respond_to do |format|
+    if book.update(book_params)
+      format.html { redirect_to "books/#{book.id}/chapters/#{chapter.id}", notice: 'Project was successfully updated.' }
+      format.json { render json: Book.all }
+    else
+      format.html { render :edit }
+      format.json { render json: book.errors, status: :unprocessable_entity }
+    end
   end
 
 private

@@ -9,7 +9,7 @@ var Chapter1 = React.createClass({
   updateLandscapeSubmit: function(e){
     e.preventDefault();
 
-    console.log("landscape updated");
+    console.log("Landscape type updated to: " + this.state.landscape_type);
   },
 
   handleLandscapeChange: function(e){
