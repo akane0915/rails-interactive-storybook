@@ -70,10 +70,10 @@ var Chapter1 = React.createClass({
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
 
-          <p>
-            Once upon a time, deep in a <strong><em>{this.state.landscape_type}</em></strong> lived a <strong><em>{this.state.family_type}</em></strong> family.  There was a great  big Papa <strong><em>{this.state.family_type}</em></strong>, a medium sized Mama <strong><em>{this.state.family_type}</em></strong>, and a wee little Baby <strong><em>{this.state.family_type}</em></strong>.
-          </p>
+          <Chapter1Text landscape_type = {this.state.landscape_type} family_type = {this.state.family_type} />
+
         </div>
+
       )
   }
 });
