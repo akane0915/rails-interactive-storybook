@@ -21,7 +21,7 @@ class BooksController < ApplicationController
 
     respond_to do |format|
       if book.update(book_params)
-        format.html { redirect_to "books/#{book.id}/chapters/#{chapter.id}", notice: 'Project was successfully updated.' }
+        format.html { redirect_to "books/#{book.id}/chapters/#{chapter.id}" }
         format.json { render json: Book.all }
       else
         format.html { render :edit }

@@ -7,26 +7,7 @@ var Chapter = React.createClass({
   },
 
   parentUpdateBook: function(formData){
-
-    $.ajax({
-     url: "/books/1",
-     dataType: 'json',
-     type: 'PATCH',
-     data: formData,
-
-     success: function(book) {
-
-       this.setState({book: book});
-
-     }.bind(this),
-
-     error: function(response, status, err) {
-
-       console.log("An error occurred");
-     }
-
-
-    });
+    this.setState({book: formData});
   },
 
   render: function() {

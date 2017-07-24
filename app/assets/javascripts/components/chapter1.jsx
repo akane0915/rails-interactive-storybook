@@ -10,7 +10,27 @@ var Chapter1 = React.createClass({
     e.preventDefault();
 
     console.log("Landscape type updated to: " + this.state.landscape_type);
-    this.props.parentUpdateBook({book: {landscape_type: this.state.landscape_type}});
+
+    $.ajax({
+      url: "/books/1",
+      dataType: 'json',
+      type: 'PATCH',
+      data: {book: {landscape_type: this.state.landscape_type}},
+
+      success: function(book) {
+
+       this.props.parentUpdateBook(book);
+
+      }.bind(this),
+
+      error: function(response, status, err) {
+
+       console.log("An error occurred");
+      }
+    });
+
+
+
   },
 
   handleLandscapeChange: function(e){
@@ -38,7 +58,7 @@ var Chapter1 = React.createClass({
 
 
           <p>
-            Once upon a time, deep in a {this.props.book.landscape_type} lived a {this.props.book.family_type} family.  There was a great  big Papa {this.props.book.family_type}, a medium sized Mama {this.props.book.family_type}, and a wee little Baby {this.props.book.family_type}.
+            Once upon a time, deep in a {this.state.landscape_type} lived a {this.props.book.family_type} family.  There was a great  big Papa {this.props.book.family_type}, a medium sized Mama {this.props.book.family_type}, and a wee little Baby {this.props.book.family_type}.
           </p>
         </div>
       )
