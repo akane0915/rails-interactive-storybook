@@ -1,4 +1,5 @@
 var Chapter = React.createClass({
+
   render: function() {
     if (this.props.chapter.number == 1) {
       return (
