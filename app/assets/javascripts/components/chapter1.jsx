@@ -6,21 +6,35 @@ var Chapter1 = React.createClass({
     }
   },
 
+  updateLandscapeSubmit: function(e){
+    e.preventDefault();
+
+    console.log("landscape updated");
+  },
+
+  handleLandscapeChange: function(e){
+    this.setState({landscape_type: e.target.value});
+  },
+
   render: function() {
       return (
         <div>
+          <h3>landscape_type:{this.props.book.landscape_type}</h3>
           <h3>{this.props.chapter.title}</h3>
 
-          <input
-            landscape_type="book[landscape_type]"
-            type="string"
-            placeholder="Landscape type"
-            value={this.state.landscape_type}
-            onChange={this.handleNameChange}
-            className="string form-control"
-          />
+          <form onSubmit={this.updateLandscapeSubmit}>
+            <input
+              name="book[landscape_type]"
+              type="string"
+              placeholder="Landscape type"
+              value={this.state.landscape_type}
+              onChange={this.handleLandscapeChange}
+              className="string form-control"
+            />
 
-          <LandscapeTypeForm book = {this.state.landscape_type}/>
+            <input type="submit" value="Save" className='btn btn-primary' />
+          </form>
+
 
           <p>
             Once upon a time, deep in a {this.props.book.landscape_type} lived a {this.props.book.family_type} family.  There was a great  big Papa {this.props.book.family_type}, a medium sized Mama {this.props.book.family_type}, and a wee little Baby {this.props.book.family_type}.
