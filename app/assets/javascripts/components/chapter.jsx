@@ -34,10 +34,10 @@ var Chapter = React.createClass({
       return (
         <div>
           <Chapter1
-            chapter = {this.state.chapter}
-            book = {this.state.book
-            parentBookSubmit={this.parentBookSubmit
-          }/>
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentBookSubmit={this.parentBookSubmit}
+          />
         </div>
       )
     } else if (this.props.chapter.number == 2) {
