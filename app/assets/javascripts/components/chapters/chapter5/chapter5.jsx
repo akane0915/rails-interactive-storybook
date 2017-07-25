@@ -10,7 +10,6 @@ var Chapter5 = React.createClass({
   },
 
   componentDidMount: function(){
-alert("componentdidmount");
       if (this.props.seat_type == "chair") {
         $('.seat_type_image').hide();
         $('#chair').fadeIn();
