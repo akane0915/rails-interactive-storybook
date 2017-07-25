@@ -45,6 +45,36 @@ var Chapter = React.createClass({
           />
         </div>
       )
+    } else if (this.props.chapter.number == 4) {
+      return (
+        <div>
+          <Chapter4
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentUpdateBook={this.parentUpdateBook}
+          />
+        </div>
+      )
+    } else if (this.props.chapter.number == 5) {
+      return (
+        <div>
+          <Chapter5
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentUpdateBook={this.parentUpdateBook}
+          />
+        </div>
+      )
+    } else if (this.props.chapter.number == 6) {
+      return (
+        <div>
+          <Chapter6
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentUpdateBook={this.parentUpdateBook}
+          />
+        </div>
+      )
     }
 
 
