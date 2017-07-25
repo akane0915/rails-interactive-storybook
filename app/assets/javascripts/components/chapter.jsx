@@ -3,12 +3,16 @@ var Chapter = React.createClass({
   getInitialState: function(){
     return {
       book: this.props.book,
+      landscape_type: this.props.book.landscape_type
+
     }
   },
 
   parentUpdateBook: function(formData){
     this.setState({book: formData});
   },
+
+
 
   render: function() {
     if (this.props.chapter.number == 1) {

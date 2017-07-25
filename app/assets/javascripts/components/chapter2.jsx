@@ -4,6 +4,8 @@ var Chapter2 = React.createClass({
     return {
       food: this.props.book.food,
       family_type: this.props.book.family_type,
+      house_type: this.props.book.house_type,
+      girl_name: this.props.book.girl_name,
     }
   },
 
@@ -13,7 +15,12 @@ var Chapter2 = React.createClass({
       url: "/books/1",
       dataType: 'json',
       type: 'PATCH',
-      data: {book: { food: this.state.food }
+      data: {
+        book: {
+          food: this.state.food,
+          house_type: this.state.house_type,
+          girl_name: this.state.girl_name,
+        },
       },
       success: function(book) {
         this.props.parentUpdateBook(book);
@@ -28,6 +35,14 @@ var Chapter2 = React.createClass({
     this.setState({food: e.target.value});
   },
 
+  handleHouseTypeChange: function(e){
+    this.setState({house_type: e.target.value});
+  },
+
+  handleGirlNameChange: function(e){
+    this.setState({girl_name: e.target.value});
+  },
+
   render: function() {
       return (
         <div>
@@ -38,7 +53,6 @@ var Chapter2 = React.createClass({
 
             <select name="book[food]" value={this.state.food}
             onChange={this.handleFoodChange}>
-
               <option value=""></option>
               <option value="porridge">Porridge</option>
               <option value="fried rice">Fried Rice</option>
@@ -47,12 +61,28 @@ var Chapter2 = React.createClass({
               <option value="gazpacho">Gazpacho</option>
             </select>
 
-            <h3>Then Click Save.</h3>
+            <h3>Then pick a structure.</h3>
+
+            <select name="book[house_type]" value={this.state.house_type}
+            onChange={this.handleHouseTypeChange}>
+              <option value=""></option>
+              <option value="cabin">Cabin</option>
+              <option value="igloo">Igloo</option>
+              <option value="treehouse">Treehouse</option>
+              <option value="tepee">Tepee</option>
+            </select>
+
+            <h3>Finally, type a girl name.</h3>
+
+            <input name="book[girl_name]" value={this.state.girl_name}
+            onChange={this.handleGirlNameChange}/>
+
+            <h3>Then Click Save!</h3>
 
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
 
-          <Chapter2Text food = {this.state.food} family_type = {this.state.family_type} />
+          <Chapter2Text food = {this.state.food} family_type = {this.state.family_type} house_type = {this.state.house_type} girl_name = {this.state.girl_name} />
 
         </div>
 

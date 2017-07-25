@@ -4,7 +4,6 @@ var Chapter1 = React.createClass({
     return {
       landscape_type: this.props.book.landscape_type,
       family_type: this.props.book.family_type,
-      landscape_image: "",
     }
   },
 
