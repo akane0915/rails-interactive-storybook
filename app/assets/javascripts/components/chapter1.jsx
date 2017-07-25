@@ -29,25 +29,17 @@ var Chapter1 = React.createClass({
     });
 
     if (this.state.landscape_type == "forest") {
-      $('body').css("background", "url('https://farm5.staticflickr.com/4316/35321253134_bf1569ce4a_o.jpg') no-repeat");
-      $('body').css("background-size", "cover");
-      $('body').css("color", "white");
+      $('body').css("background", "url('https://farm5.staticflickr.com/4316/35321253134_bf1569ce4a_o.jpg') no-repeat").css("background-size", "cover").css("color", "white");
+      $('body select').css("color", "black");
     } else if (this.state.landscape_type == "tundra") {
-      $('body').css("background", "url('https://farm5.staticflickr.com/4329/35321271654_9ef44b5c1c_o.jpg') no-repeat");
-      $('body').css("background-size", "cover");
-      $('body').css("color", "black");
+      $('body').css("background", "url('https://farm5.staticflickr.com/4329/35321271654_9ef44b5c1c_o.jpg') no-repeat").css("background-size", "cover").css("color", "black");
     } else if (this.state.landscape_type == "grassland") {
-      $('body').css("background", "url('https://farm5.staticflickr.com/4292/35321258984_4ff3ee7f0f_o.jpg ') no-repeat");
-      $('body').css("background-size", "cover");
-      $('body').css("color", "black");
+      $('body').css("background", "url('https://farm5.staticflickr.com/4292/35321258984_4ff3ee7f0f_o.jpg ') no-repeat").css("background-size", "cover").css("color", "black");
     } else if (this.state.landscape_type == "desert") {
-      $('body').css("background", "url('https://farm5.staticflickr.com/4308/35992305862_80be18696e_o.jpg') no-repeat");
-      $('body').css("background-size", "cover");
-      $('body').css("color", "black");
+      $('body').css("background", "url('https://farm5.staticflickr.com/4308/35992305862_80be18696e_o.jpg') no-repeat").css("background-size", "cover").css("color", "black");
     } else if (this.state.landscape_type == "ocean") {
-      $('body').css("background", "url('https://farm5.staticflickr.com/4326/35321265694_5c8551247b_o.jpg') no-repeat");
-      $('body').css("background-size", "cover");
-      $('body').css("color", "white");
+      $('body').css("background", "url('https://farm5.staticflickr.com/4326/35321265694_5c8551247b_o.jpg') no-repeat").css("background-size", "cover").css("color", "white");
+      $('body select').css("color", "black");
     }
 
     if (this.state.family_type == "bear") {
@@ -110,9 +102,7 @@ var Chapter1 = React.createClass({
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
 
-          <Chapter1Images family_type = {this.state.family_type} />
-
-          
+          <Chapter1Images />
 
           <Chapter1Text landscape_type = {this.state.landscape_type} family_type = {this.state.family_type} />
 
