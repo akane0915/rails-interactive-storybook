@@ -29,12 +29,18 @@ var Chapter1 = React.createClass({
       }
     });
 
-    console.log(this.state.family_type);
-    console.log(this.state.landscape_type);
     if (this.state.family_type == "bear") {
-      $('.bear').fadeIn();
-    } else {
-      $('.bear').hide();
+      $('.family_type_image').hide();
+      $('#bear').fadeIn();
+    } else if (this.state.family_type == "puffin") {
+      $('.family_type_image').hide();
+      $('#puffin').fadeIn();
+    } else if (this.state.family_type == "banana slug") {
+      $('.family_type_image').hide();
+      $('#banana-slug').fadeIn();
+    } else if (this.state.family_type == "donkey") {
+      $('.family_type_image').hide();
+      $('#donkey').fadeIn();
     }
   },
 
@@ -83,8 +89,20 @@ var Chapter1 = React.createClass({
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
 
-          <div className = "bear" style={{display:'none'}} >
-            <img src="https://farm5.staticflickr.com/4318/36101663056_b1140e2b4a.jpg" alt="rubber duck"/>
+          <div className = "family_type_image" id = "bear" style={{display:'none'}} >
+            <img src="https://farm5.staticflickr.com/4297/35992200362_e71c49f967_m.jpg" alt="bear"/>
+          </div>
+
+          <div className = "family_type_image" id = "puffin" style={{display:'none'}} >
+            <img src="https://farm5.staticflickr.com/4311/35992215332_2248b3f160_m.jpg" alt="puffin"/>
+          </div>
+
+          <div className = "family_type_image" id = "banana-slug" style={{display:'none'}} >
+            <img src="https://farm5.staticflickr.com/4314/36119855596_af2db4c0fd_m.jpg " alt="banana slug"/>
+          </div>
+
+          <div className = "family_type_image" id = "donkey" style={{display:'none'}} >
+            <img src="https://farm5.staticflickr.com/4321/35992209302_603a1ae309_m.jpg " alt="donkey"/>
           </div>
 
           <Chapter1Text landscape_type = {this.state.landscape_type} family_type = {this.state.family_type} />
