@@ -37,20 +37,14 @@ var Chapter1 = React.createClass({
   },
 
   render: function() {
-    var family_image = this.state.family_type + '.jpg'
-    console.log(family_image)
 
-    if (this.state.family_type == "bear") {
-      $('.bear').show();
-    }
+
 
       return (
         <div>
           <h1>{this.props.chapter.title}</h1>
 
-          <div className = "bear" style={{display:'none'}} >
-            <img src="https://farm5.staticflickr.com/4318/36101663056_b1140e2b4a.jpg" alt="rubber duck"/>
-          </div>
+
 
           <form onSubmit={this.updateChapterOneFieldsSubmit}>
             <h3>Choose your landscape</h3>

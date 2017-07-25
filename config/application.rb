@@ -29,3 +29,7 @@ module InteractiveStorybook
     config.generators.system_tests = nil
   end
 end
+
+MyApp::Application.configure do
+  config.react.addons = true 
+end
