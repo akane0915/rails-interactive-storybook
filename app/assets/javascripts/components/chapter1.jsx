@@ -29,6 +29,12 @@ var Chapter1 = React.createClass({
       }
     });
 
+    if (this.state.landscape_type == "forest") {
+      $('body').css("background", "url('https://farm5.staticflickr.com/4316/35321253134_d756971fea_m.jpg') no-repeat");
+      $('body').css("background-size", "cover");
+      $('body').css("color", "white");
+    }
+
     if (this.state.family_type == "bear") {
       $('.family_type_image').hide();
       $('#bear').fadeIn();
@@ -56,6 +62,11 @@ var Chapter1 = React.createClass({
 
       return (
         <div>
+
+        <div className="test">
+          <h1>Test section</h1>
+        </div>
+
           <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateChapterOneFieldsSubmit}>
