@@ -1,5 +1,7 @@
 {
   "name": "interactive-storybook",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "react-transition-group": "^2.2.0"
+  }
 }
