@@ -13,12 +13,22 @@ class Seed
     book.chapters.create!([
       { number: 1,
         title: "Chapter 1",
-        text: "test text1"
       },
       { number: 2,
         title: "Chapter 2",
-        text: "test text2"
       },
+      { number: 3,
+        title: "Chapter 3",
+      },
+      { number: 4,
+        title: "Chapter 4",
+      },
+      { number: 5,
+        title: "Chapter 5",
+      },
+      { number: 6,
+        title: "Chapter 6",
+      }
     ])
     puts "Generated #{Book.count} books"
     puts "Generated #{Chapter.count} chapters"

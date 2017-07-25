@@ -28,13 +28,28 @@ var Chapter = React.createClass({
     } else if (this.props.chapter.number == 2) {
       return (
         <div>
-        <Chapter2
-          chapter = {this.props.chapter}
-          book = {this.state.book}
-          parentUpdateBook={this.parentUpdateBook}
-        />
+          <Chapter2
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentUpdateBook={this.parentUpdateBook}
+          />
+        </div>
+      )
+    } else if (this.props.chapter.number == 3) {
+      return (
+        <div>
+          <Chapter3
+            chapter = {this.props.chapter}
+            book = {this.state.book}
+            parentUpdateBook={this.parentUpdateBook}
+          />
         </div>
       )
     }
+
+
+
+
+
   }
 });

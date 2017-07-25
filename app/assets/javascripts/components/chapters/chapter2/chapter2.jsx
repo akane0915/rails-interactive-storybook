@@ -105,6 +105,7 @@ var Chapter2 = React.createClass({
               <option value="tepee">Tepee</option>
             </select>
 
+
             <h3>Finally, type a girl name.</h3>
 
             <input name="book[girl_name]" value={this.state.girl_name}
