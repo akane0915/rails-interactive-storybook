@@ -4,10 +4,12 @@ var Chapter1 = React.createClass({
     return {
       landscape_type: this.props.book.landscape_type,
       family_type: this.props.book.family_type,
+      landscape_image: "",
     }
   },
 
   updateChapterOneFieldsSubmit: function(e){
+
     e.preventDefault();
     $.ajax({
       url: "/books/1",
@@ -26,6 +28,14 @@ var Chapter1 = React.createClass({
         console.log("An error occurred");
       }
     });
+
+    console.log(this.state.family_type);
+    console.log(this.state.landscape_type);
+    if (this.state.family_type == "bear") {
+      $('.bear').fadeIn();
+    } else {
+      $('.bear').hide();
+    }
   },
 
   handleLandscapeChange: function(e){
@@ -38,13 +48,9 @@ var Chapter1 = React.createClass({
 
   render: function() {
 
-
-
       return (
         <div>
           <h1>{this.props.chapter.title}</h1>
-
-
 
           <form onSubmit={this.updateChapterOneFieldsSubmit}>
             <h3>Choose your landscape</h3>
@@ -76,6 +82,10 @@ var Chapter1 = React.createClass({
 
             <input type="submit" value="Save" className='btn btn-primary' />
           </form>
+
+          <div className = "bear" style={{display:'none'}} >
+            <img src="https://farm5.staticflickr.com/4318/36101663056_b1140e2b4a.jpg" alt="rubber duck"/>
+          </div>
 
           <Chapter1Text landscape_type = {this.state.landscape_type} family_type = {this.state.family_type} />
 
