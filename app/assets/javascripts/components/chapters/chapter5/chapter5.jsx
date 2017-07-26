@@ -44,7 +44,9 @@ var Chapter5 = React.createClass({
 
           <h1>{this.props.chapter.title}</h1>
 
-          <Chapter5Images/>
+          <div className="center-text">
+            <Chapter5Images />
+          </div>
 
           <Chapter5Text family_type = {this.state.family_type} bed_type = {this.state.bed_type} seat_type = {this.state.seat_type} />
         </div>

@@ -43,6 +43,7 @@ var Chapter4 = React.createClass({
 
   handleBedTypeChange: function(e){
     this.setState({bed_type: e.target.value});
+    $('#chapter4-button').addClass('animated rubberBand');
   },
 
   render: function() {
@@ -54,10 +55,10 @@ var Chapter4 = React.createClass({
           <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateChapterFourFieldsSubmit} className="center-text">
-            <h3>Select something you sleep on!</h3>
+            <h1>Select something you sleep on!</h1>
 
             <select name="book[bed_type]" value={this.state.bed_type}
-            onChange={this.handleBedTypeChange}>
+            onChange={this.handleBedTypeChange} className="form-select">
 
               <option value=""></option>
               <option value="bed">Bed</option>
@@ -65,17 +66,18 @@ var Chapter4 = React.createClass({
               <option value="yoga mat">Yoga mat</option>
             </select>
 
-            <h3>Now Click Save!</h3>
+            <h1>Now Click Save!</h1>
 
-            <input type="submit" value="Save" className='btn btn-default save-button' />
+            <input type="submit" value="Save" id="chapter4-button" className='btn btn-default save-button' />
           </form>
 
-          <Chapter4Images />
+          <div className="center-text">
+            <Chapter4Images />
+          </div>
 
           <Chapter4Text bed_type = {this.state.bed_type} family_type = {this.state.family_type} food = {this.state.food}/>
 
         </div>
-
       )
   }
 });

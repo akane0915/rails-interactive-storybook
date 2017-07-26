@@ -47,6 +47,7 @@ var Chapter3 = React.createClass({
 
   handleSeatTypeChange: function(e){
     this.setState({seat_type: e.target.value});
+    $('#chapter3-button').addClass('animated rubberBand');
   },
 
   render: function() {
@@ -57,10 +58,10 @@ var Chapter3 = React.createClass({
           <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateChapterThreeFieldsSubmit} className="center-text">
-            <h3>Choose your favorite type of seat!</h3>
+            <h1>Choose your favorite type of seat!</h1>
 
             <select name="book[seat_type]" value={this.state.seat_type}
-            onChange={this.handleSeatTypeChange}>
+            onChange={this.handleSeatTypeChange} className="form-select">
               <option value=""></option>
               <option value="chair">Chair</option>
               <option value="bike seat">Bike Seat</option>
@@ -68,12 +69,14 @@ var Chapter3 = React.createClass({
               <option value="saddle">Saddle</option>
             </select>
 
-            <h3>Then Click Save!</h3>
+            <h1>Then Click Save!</h1>
 
-            <input type="submit" value="Save" className='btn btn-default save-button' />
+            <input type="submit" value="Save" id="chapter3-button" className='btn btn-default save-button' />
           </form>
 
-          <Chapter3Images/>
+          <div className="center-text">
+            <Chapter3Images />
+          </div>
 
           <Chapter3Text food = {this.state.food} family_type = {this.state.family_type} seat_type = {this.state.seat_type} />
 
