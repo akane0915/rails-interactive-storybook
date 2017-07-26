@@ -8,6 +8,7 @@ var Chapter1Form = React.createClass({
 
   handleFamilyChange: function(e){
     this.setState({family_type: e.target.value});
+    $('#chapter1-button').addClass('animated rubberBand');
   },
 
   render: function() {
@@ -42,7 +43,7 @@ var Chapter1Form = React.createClass({
 
           <h3>Now Click Save!</h3>
 
-          <input type="submit" value="Save" className='btn btn-primary' />
+          <input type="submit" value="Save" id= "chapter1-button" className='btn btn-primary' />
         </form>
 
       </div>
