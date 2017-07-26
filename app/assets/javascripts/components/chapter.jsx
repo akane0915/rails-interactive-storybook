@@ -32,6 +32,7 @@ var Chapter = React.createClass({
             chapter = {this.props.chapter}
             book = {this.state.book}
             parentUpdateBook={this.parentUpdateBook}
+            landscape_type= {this.state.landscape_type}
           />
         </div>
       )

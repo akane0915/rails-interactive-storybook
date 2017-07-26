@@ -1,8 +1,8 @@
 <%= react_component 'Chapter', chapter: @chapter, book: @book %>
 
-
-
-<h3><%= link_to "Next Chapter", book_chapter_path(@book, @chapter.number + 1) %></h3>
+<% unless @chapter.number == 6 %>
+  <h3><%= link_to "Next Chapter", book_chapter_path(@book, @chapter.number + 1) %></h3>
+<% end %>
 
 <% unless @chapter.number == 1 %>
   <h3><%= link_to "Go Back", book_chapter_path(@book, @chapter.number - 1) %></h3>
