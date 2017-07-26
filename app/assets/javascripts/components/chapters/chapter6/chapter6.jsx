@@ -6,6 +6,7 @@ var Chapter6 = React.createClass({
       family_type: this.props.book.family_type,
       house_type: this.props.book.house_type,
       girl_name: this.props.book.girl_name,
+      landscape_type: this.props.landscape_type,
     }
   },
 
@@ -13,6 +14,8 @@ var Chapter6 = React.createClass({
   render: function() {
       return (
         <div>
+          <LandscapeType landscape_type = {this.state.landscape_type}/>
+
           <h1>{this.props.chapter.title}</h1>
 
           <Chapter6Text

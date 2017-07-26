@@ -5,6 +5,7 @@ var Chapter3 = React.createClass({
       food: this.props.book.food,
       family_type: this.props.book.family_type,
       seat_type: this.props.book.seat_type,
+      landscape_type: this.props.landscape_type,
     }
   },
 
@@ -51,6 +52,8 @@ var Chapter3 = React.createClass({
   render: function() {
       return (
         <div>
+          <LandscapeType landscape_type = {this.state.landscape_type}/>
+
           <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateChapterThreeFieldsSubmit}>
