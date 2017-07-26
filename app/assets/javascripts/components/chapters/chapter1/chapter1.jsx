@@ -40,6 +40,8 @@ var Chapter1 = React.createClass({
     } else if (this.state.landscape_type == "ocean") {
       $('body').css("background", "url('https://farm5.staticflickr.com/4326/35321265694_5c8551247b_o.jpg') no-repeat").css("background-size", "cover").css("color", "white");
       $('body select').css("color", "black");
+    } else {
+      $('body').css("background", "url('https://farm5.staticflickr.com/4328/36048567901_6b9ce897e4_o.jpg') no-repeat").css("background-size", "cover").css("color", "black");
     }
 
     if (this.state.family_type == "bear") {
@@ -70,6 +72,8 @@ var Chapter1 = React.createClass({
 
       return (
         <div>
+          <LandscapeType landscape_type = {this.state.landscape_type}/>
+
           <h1>{this.props.chapter.title}</h1>
 
           <form onSubmit={this.updateChapterOneFieldsSubmit}>
