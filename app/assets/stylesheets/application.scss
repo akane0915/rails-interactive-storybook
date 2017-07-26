@@ -25,8 +25,31 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Rochester', cursive;
+  letter-spacing: 4px;
 
   p{
     font-size: 3em;
+  }
+
+  a:link {
+    text-decoration: none;
+  }
+}
+
+nav{
+  font-family: 'Open Sans', sans-serif;
+  font-size: .5em;
+  a{
+    color: black;
+  }
+}
+
+#begin-link-container{
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  #begin-link a {
+    color: #fbf2e6;
   }
 }

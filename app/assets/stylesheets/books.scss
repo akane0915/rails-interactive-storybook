@@ -1,0 +1,12 @@
+.book_title{
+  padding-top: 100px;
+  text-align: center;
+}
+
+#book1_title_link {
+  font-size: 6em;
+  color: #fbf2e6;
+  &.hover {
+    text-decoration: none;
+  }
+}

@@ -1,3 +1,6 @@
-<h1 class="animated bounce">Interactive Story Book</h1>
 
 <%= react_component 'Books', books: @books %>
+
+<div id="begin-link-container">
+  <p id="begin-link" class="animated infinite pulse"><%= link_to 'Begin', "books/1/chapters/1" %></p>
+</div>
