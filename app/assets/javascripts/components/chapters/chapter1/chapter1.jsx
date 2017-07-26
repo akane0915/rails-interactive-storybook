@@ -76,11 +76,11 @@ var Chapter1 = React.createClass({
 
           <h1>{this.props.chapter.title}</h1>
 
-          <form onSubmit={this.updateChapterOneFieldsSubmit}>
-            <h3>Choose your landscape</h3>
+          <form onSubmit={this.updateChapterOneFieldsSubmit} className="center-text">
+            <h1>Choose your landscape</h1>
 
             <select name="book[landscape_type]" value={this.state.landscape_type}
-            onChange={this.handleLandscapeChange}>
+            onChange={this.handleLandscapeChange} className="form-select">
 
               <option value=""></option>
               <option value="forest">Forest</option>
@@ -90,10 +90,10 @@ var Chapter1 = React.createClass({
               <option value="ocean">Ocean</option>
             </select>
 
-            <h3>Then pick an animal</h3>
+            <h1>Then pick an animal</h1>
 
             <select name="book[family_type]" value={this.state.family_type}
-            onChange={this.handleFamilyChange}>
+            onChange={this.handleFamilyChange} className="form-select">
 
               <option value=""></option>
               <option value="bear">Bear</option>
@@ -102,12 +102,14 @@ var Chapter1 = React.createClass({
               <option value="donkey">Donkey</option>
             </select>
 
-            <h3>Now Click Save!</h3>
+            <h1>Now Click Save!</h1>
 
-            <input type="submit" value="Save" id="chapter1-button" className='btn btn-primary' />
+            <input type="submit" value="Save" id="chapter1-button" className='btn btn-default save-button' />
           </form>
 
-          <Chapter1Images />
+          <div className="center-text">
+            <Chapter1Images />
+          </div>
 
           <Chapter1Text landscape_type = {this.state.landscape_type} family_type = {this.state.family_type} />
 

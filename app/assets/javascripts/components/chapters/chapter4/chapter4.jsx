@@ -53,7 +53,7 @@ var Chapter4 = React.createClass({
 
           <h1>{this.props.chapter.title}</h1>
 
-          <form onSubmit={this.updateChapterFourFieldsSubmit}>
+          <form onSubmit={this.updateChapterFourFieldsSubmit} className="center-text">
             <h3>Select something you sleep on!</h3>
 
             <select name="book[bed_type]" value={this.state.bed_type}

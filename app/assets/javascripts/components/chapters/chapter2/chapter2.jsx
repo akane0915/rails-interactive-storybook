@@ -75,6 +75,7 @@ var Chapter2 = React.createClass({
 
   handleGirlNameChange: function(e){
     this.setState({girl_name: e.target.value});
+    $('#chapter2-button').addClass('animated infinite rubberBand');
   },
 
   render: function() {
@@ -84,11 +85,11 @@ var Chapter2 = React.createClass({
 
           <h1>{this.props.chapter.title}</h1>
 
-          <form onSubmit={this.updateChapterTwoFieldsSubmit}>
-            <h3>Pick a food!</h3>
+          <form onSubmit={this.updateChapterTwoFieldsSubmit} className="center-text">
+            <h1>Pick a food!</h1>
 
             <select name="book[food]" value={this.state.food}
-            onChange={this.handleFoodChange}>
+            onChange={this.handleFoodChange} className="form-select">
               <option value=""></option>
               <option value="porridge">Porridge</option>
               <option value="fried rice">Fried Rice</option>
@@ -97,10 +98,10 @@ var Chapter2 = React.createClass({
               <option value="gazpacho">Gazpacho</option>
             </select>
 
-            <h3>Then pick a structure.</h3>
+            <h1>Then pick a structure.</h1>
 
             <select name="book[house_type]" value={this.state.house_type}
-            onChange={this.handleHouseTypeChange}>
+            onChange={this.handleHouseTypeChange} className="form-select">
               <option value=""></option>
               <option value="cabin">Cabin</option>
               <option value="igloo">Igloo</option>
@@ -109,17 +110,19 @@ var Chapter2 = React.createClass({
             </select>
 
 
-            <h3>Finally, type a girl name.</h3>
+            <h1>Finally, type a girl name.</h1>
 
             <input name="book[girl_name]" value={this.state.girl_name}
-            onChange={this.handleGirlNameChange}/>
+            onChange={this.handleGirlNameChange} className="form-select"/>
 
             <h3>Then Click Save!</h3>
 
-            <input type="submit" value="Save" className='btn btn-primary' />
+            <input type="submit" value="Save" id="chapter2-button" className='btn btn-primary'/>
           </form>
 
-          <Chapter2Images/>
+          <div className="center-text">
+            <Chapter2Images />
+          </div>
 
           <Chapter2Text food = {this.state.food} family_type = {this.state.family_type} house_type = {this.state.house_type} girl_name = {this.state.girl_name} />
 
