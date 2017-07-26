@@ -65,7 +65,7 @@ var Chapter1 = React.createClass({
 
   handleFamilyChange: function(e){
     this.setState({family_type: e.target.value});
-    $('#chapter1-button').addClass('animated infinite rubberBand');
+    $('#chapter1-button').addClass('animated rubberBand');
   },
 
   render: function() {

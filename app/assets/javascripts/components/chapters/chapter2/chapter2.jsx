@@ -75,7 +75,7 @@ var Chapter2 = React.createClass({
 
   handleGirlNameChange: function(e){
     this.setState({girl_name: e.target.value});
-    $('#chapter2-button').addClass('animated infinite rubberBand');
+    $('#chapter2-button').addClass('animated rubberBand');
   },
 
   render: function() {
@@ -115,9 +115,9 @@ var Chapter2 = React.createClass({
             <input name="book[girl_name]" value={this.state.girl_name}
             onChange={this.handleGirlNameChange} className="form-select"/>
 
-            <h3>Then Click Save!</h3>
+            <h1>Then Click Save!</h1>
 
-            <input type="submit" value="Save" id="chapter2-button" className='btn btn-primary'/>
+            <input type="submit" value="Save" id="chapter2-button" className='btn btn-default save-button'/>
           </form>
 
           <div className="center-text">

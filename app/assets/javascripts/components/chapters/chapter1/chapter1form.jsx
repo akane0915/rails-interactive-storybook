@@ -43,7 +43,7 @@ var Chapter1Form = React.createClass({
 
           <h3>Now Click Save!</h3>
 
-          <input type="submit" value="Save" id= "chapter1-button" className='btn btn-primary' />
+          <input type="submit" value="Save" id= "chapter1-button" className='btn btn-default' />
         </form>
 
       </div>

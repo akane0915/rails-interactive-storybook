@@ -67,7 +67,7 @@ var Chapter4 = React.createClass({
 
             <h3>Now Click Save!</h3>
 
-            <input type="submit" value="Save" className='btn btn-primary' />
+            <input type="submit" value="Save" className='btn btn-default save-button' />
           </form>
 
           <Chapter4Images />
