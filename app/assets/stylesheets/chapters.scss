@@ -25,6 +25,7 @@ input.save-button {
 .chapter-navigation-container {
   display: flex;
   justify-content: space-between;
+  margin: 50px 0;
 }
 
 a.chapter-navigation-link {
@@ -33,6 +34,14 @@ a.chapter-navigation-link {
   display: inline;
 }
 
-.centered-picture {
-  
+.centered {
+  display: flex;
+  justify-content: center;
+}
+
+#the-end-text {
+  margin: 30px 0;
+  h1 {
+    font-size: 9em;
+  }
 }

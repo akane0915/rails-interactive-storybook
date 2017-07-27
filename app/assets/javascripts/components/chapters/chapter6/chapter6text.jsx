@@ -13,7 +13,10 @@ var Chapter6Text = React.createClass({
 
         <Chapter6Images/>
 
-        <h1>The End</h1>
+        <div className="centered" id="the-end-text">
+          <h1>The End</h1>
+        </div>
+
       </div>
     )
   }
