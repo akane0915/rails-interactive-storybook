@@ -65,7 +65,11 @@ var Chapter1 = React.createClass({
 
   handleFamilyChange: function(e){
     this.setState({family_type: e.target.value});
-    $('#chapter1-button').addClass('animated rubberBand');
+    $('#chapter1-button').addClass('animated infinite rubberBand');
+  },
+
+  stopSaveButtonAnimation: function(){
+    $('#chapter1-button').removeClass('animated infinite rubberBand');
   },
 
   render: function() {
@@ -104,7 +108,7 @@ var Chapter1 = React.createClass({
 
             <h1>Now Click Save!</h1>
 
-            <input type="submit" value="Save" id="chapter1-button" className='btn btn-default save-button' />
+            <input onClick={this.stopSaveButtonAnimation} type="submit" value="Save" id="chapter1-button" className='btn btn-default save-button' />
           </form>
 
           <div className="center-text">

@@ -44,10 +44,13 @@ var Chapter3 = React.createClass({
 
   },
 
-
   handleSeatTypeChange: function(e){
     this.setState({seat_type: e.target.value});
-    $('#chapter3-button').addClass('animated rubberBand');
+    $('#chapter3-button').addClass('animated infinite rubberBand');
+  },
+
+  stopSaveButtonAnimation: function(){
+    $('#chapter3-button').removeClass('animated infinite rubberBand');
   },
 
   render: function() {
@@ -71,7 +74,7 @@ var Chapter3 = React.createClass({
 
             <h1>Then Click Save!</h1>
 
-            <input type="submit" value="Save" id="chapter3-button" className='btn btn-default save-button' />
+            <input onClick={this.stopSaveButtonAnimation} type="submit" value="Save" id="chapter3-button" className='btn btn-default save-button' />
           </form>
 
           <div className="center-text">

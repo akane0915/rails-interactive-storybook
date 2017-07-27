@@ -43,7 +43,11 @@ var Chapter4 = React.createClass({
 
   handleBedTypeChange: function(e){
     this.setState({bed_type: e.target.value});
-    $('#chapter4-button').addClass('animated rubberBand');
+    $('#chapter4-button').addClass('animated infinite rubberBand');
+  },
+
+  stopSaveButtonAnimation: function(){
+    $('#chapter4-button').removeClass('animated infinite rubberBand');
   },
 
   render: function() {
@@ -68,7 +72,7 @@ var Chapter4 = React.createClass({
 
             <h1>Now Click Save!</h1>
 
-            <input type="submit" value="Save" id="chapter4-button" className='btn btn-default save-button' />
+            <input onClick={this.stopSaveButtonAnimation} type="submit" value="Save" id="chapter4-button" className='btn btn-default save-button' />
           </form>
 
           <div className="center-text">
