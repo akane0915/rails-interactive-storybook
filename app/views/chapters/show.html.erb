@@ -1,11 +1,13 @@
-<div class="chapter-container">  
+<div class="chapter-container">
   <%= react_component 'Chapter', chapter: @chapter, book: @book %>
 </div>
 
-<% unless @chapter.number == 6 %>
-  <%= link_to "", book_chapter_path(@book, @chapter.number + 1), class: "button btnFloat btnCream" %>
-<% end %>
+<div class="chapter-navigation-container">
+  <% unless @chapter.number == 1 %>
+    <%= link_to "Go Back", book_chapter_path(@book, @chapter.number - 1), class: "btn btn-default chapter-navigation-link", id: "go-back-link" %>
+  <% end %>
 
-<% unless @chapter.number == 1 %>
-  <h3><%= link_to "Go Back", book_chapter_path(@book, @chapter.number - 1) %></h3>
-<% end %>
+  <% unless @chapter.number == 6 %>
+    <%= link_to "Turn the Page", book_chapter_path(@book, @chapter.number + 1), class: "btn btn-default chapter-navigation-link", id: "next-chapter-link"%>
+  <% end %>
+</div>

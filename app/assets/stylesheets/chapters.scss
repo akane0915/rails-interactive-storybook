@@ -1,57 +1,3 @@
-a.button {
-  display: block;
-  position: relative;
-  float: left;
-  width: auto;
-  padding: 0;
-  font-weight: 600;
-  text-align: center;
-  line-height: 50px;
-  color: black;
-  border-radius: 5px;
-  transition: all 0.2s;
-  font-family: 'Raleway', sans-serif;
-}
-
-.btnCream {
-  background: #fbf2e6;
-}
-
-.btnFloat {
-  background: none;
-  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.5);
-}
-
-.btnFloat:before {
-  content: 'Next Page';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 120px;
-  height: 50px;
-  border-radius: 5px;
-  transition: all 0.2s ;
-}
-
-.btnCream.btnFloat:before {
-  background: #fbf2e6;
-}
-
-.btnFloat:before {
-  box-shadow: 0px 5px 5px -2px rgba(0, 0, 0, 0.4);
-}
-
-.btnFloat:hover:before {
-  margin-top: -2px;
-  margin-left: 0px;
-  transform: scale(1.1,1.1);
-  -ms-transform: scale(1.1,1.1);
-  -webkit-transform: scale(1.1,1.1);
-  box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 0.25);
-}
-
-
 .chapter-container {
   display: flex;
   justify-content: center;
@@ -74,4 +20,15 @@ input.save-button {
 .user-selected-image {
   margin-top: 30px;
   box-shadow: 0px 10px 10px -4px rgba(0, 0, 0, 0.25)
+}
+
+.chapter-navigation-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+a.chapter-navigation-link {
+  font-size: 2em;
+  width: 250px;
+  display: inline;
 }
