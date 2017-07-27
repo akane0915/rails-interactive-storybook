@@ -11,12 +11,12 @@
   </head>
 
   <body>
-    <nav>
-      <p class="navbar-text pull-right">
-        <%= link_to 'Home', root_path, class: 'navbar-link' %>
-      </p>
-    </nav>
     <div class="container">
+      <nav>
+        <p class="navbar-text pull-right">
+          <%= link_to 'Home', root_path, class: 'navbar-link' %>
+        </p>
+      </nav>
       <%= yield %>
     </div>
   </body>

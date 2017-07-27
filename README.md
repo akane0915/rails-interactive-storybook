@@ -65,6 +65,7 @@ Run `bundle exec rspec` in terminal to test.
 
 * Ruby on Rails
 * React
+* JSX
 * ActiveRecord
 * Postgres
 * Bundler

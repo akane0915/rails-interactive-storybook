@@ -26,30 +26,47 @@ body {
   background-size: cover;
   font-family: 'Rochester', cursive;
   letter-spacing: 4px;
-
-  p{
-    font-size: 3em;
-  }
-
-  a:link {
-    text-decoration: none;
-  }
+  display: flex;
+  align-content: stretch;
 }
 
 nav{
-  font-family: 'Open Sans', sans-serif;
-  font-size: .5em;
+  font-size: .8em;
   a{
     color: black;
   }
 }
 
-#begin-link-container{
+p{
+  font-size: 3em;
+}
 
+a:link {
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100%;
+  width: 100%;
+  margin: 20px;;
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  #begin-link a {
-    color: #fbf2e6;
+  flex-direction: column;
+
+  #book-container {
+    flex-grow: 1;
+  }
+
+  #begin-link-container{
+    width: 100%;
+    flex-grow: 2;
+    margin: 0 0 0 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    #begin-link a {
+      color: #fbf2e6;
+      text-shadow: 3px 4px 2px #000;
+      font-size: 2em;
+    }
   }
 }
