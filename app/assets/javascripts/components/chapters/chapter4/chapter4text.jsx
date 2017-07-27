@@ -10,7 +10,7 @@ var Chapter4Text = React.createClass({
           Meanwhile, the three <strong><em>{this.props.family_type}</em></strong> s decided to go back home to eat their warm <strong><em>{this.props.food}</em></strong>. When they came into the kitchen, Papa <strong><em>{this.props.family_type}</em></strong> said, in a deep voice, "Somebody’s been eating my <strong><em>{this.props.food}</em></strong>.” Mama <strong><em>{this.props.family_type}</em></strong> said, in a sweet voice, "Somebody’s been eating my <strong><em>{this.props.food}</em></strong>.” Then, Baby <strong><em>{this.props.family_type}</em></strong> said, as he began to cry, "Somebody’s been eating my <strong><em>{this.props.food}</em></strong> and ate it all up!"
         </p>
 
-        <div id = "empty-bowl" >
+        <div id = "empty-bowl" className = "centered-picture">
           <img src="https://farm5.staticflickr.com/4320/36125277236_3cc5345f86_m.jpg" alt="empty bowl"/>
         </div>
 
