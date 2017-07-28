@@ -4,7 +4,7 @@
 
 #### By _**Asia Kane**_
 
-![Homepage](./app/assets/images/homepage-ss.png)
+![Homepage](./app/assets/images/homepage.png)
 
 ## Description
 
@@ -80,7 +80,11 @@ Run `bundle exec rspec` in terminal to test.
 _N/A_
 
 #### Screen Shots
-
+![](./app/assets/images/forest.png)
+![](./app/assets/images/grassland.png)
+![](./app/assets/images/tundra.png)
+![](./app/assets/images/ocean.png)
+![](./app/assets/images/desert.png)
 
 ## Support and contact details
 _I encourage you to update/make suggestions/refactor this code as you see fit. I am always open to improvement! Please contact Asia Kane at asialkane@gmail.com with questions._
